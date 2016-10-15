@@ -33,6 +33,7 @@ OBDProfile* OBDProfile::instance()
     static OBDProfile obdProfile;
     return &obdProfile;
 }
+
 /**
  * Construct OBDProfile object
  */

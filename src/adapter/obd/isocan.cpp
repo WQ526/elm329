@@ -157,7 +157,6 @@ bool IsoCanAdapter::receiveFromEcu(bool sendReply)
     return msgReceived;
 }
 
-
 int IsoCanAdapter::getP2MaxTimeout() const
 {
     int p2Timeout = config_->getIntProperty(PAR_TIMEOUT); 
