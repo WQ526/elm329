@@ -30,18 +30,19 @@ void CanIDToString(uint32_t num, string& str, bool extended)
         str += to_ascii(value.bvalue[0] & 0x0F);
     }
     else { // 29 bit extended CAN identifier
+        bool useSpaces = AdapterConfig::instance()->getBoolProperty(PAR_SPACES);
         str += to_ascii(value.bvalue[3] >> 4);
         str += to_ascii(value.bvalue[3] & 0x0F);
-        //if (Settings.useSpaces)
-        //    str += ' ';
+        if (useSpaces)
+            str += ' ';
         str += to_ascii(value.bvalue[2] >> 4);
         str += to_ascii(value.bvalue[2] & 0x0F);
-        //if (Settings.useSpaces)
-        //    str += ' ';
+        if (useSpaces)
+            str += ' ';
         str += to_ascii(value.bvalue[1] >> 4);
         str += to_ascii(value.bvalue[1] & 0x0F);
-        //if (Settings.useSpaces)
-        //    str += ' ';
+        if (useSpaces)
+            str += ' ';
         str += to_ascii(value.bvalue[0] >> 4);
         str += to_ascii(value.bvalue[0] & 0x0F);
     }

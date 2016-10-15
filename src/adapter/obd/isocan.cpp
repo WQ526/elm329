@@ -189,12 +189,12 @@ int IsoCanAdapter::onConnectEcu(bool sendReply)
     open();
 
     switch (OBDProfile::instance()->getProtocol()) {
-    	case PROT_ISO15765_1150:
-    		connected_ = true;
-    		return PROT_ISO15765_1150;
-    	case PROT_ISO15765_2950:
-    		connected_ = true;
-    		return PROT_ISO15765_2950;
+        case PROT_ISO15765_1150:
+            connected_ = true;
+            return PROT_ISO15765_1150;
+        case PROT_ISO15765_2950:
+            connected_ = true;
+            return PROT_ISO15765_2950;
 
     }
 
