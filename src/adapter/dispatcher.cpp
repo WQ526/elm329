@@ -20,7 +20,7 @@ using namespace util;
 //
 static const char ErrMessage [] = "?";
 static const char OkMessage  [] = "OK";
-static const char Version    [] = "1.10";
+static const char Version    [] = "1.11";
 static const char Interface  [] = "ELM329 v2.1";
 static const char Copyright  [] = "Copyright (c) 2009-2016 ObdDiag.Net";
 static const char Copyright2 [] = "This is free software; see the source for copying conditions. There is NO";
@@ -118,7 +118,6 @@ static void OnSetOK(const string& cmd, int par)
 
 static void OnCanShowStatus(const string& cmd, int par)
 {
-    return;
 }
 
 /**
@@ -220,7 +219,6 @@ static void OnProtocolDescribeNum(const string& cmd, int par)
 
 static void OnJ1939Monitor(const string& cmd, int par)
 {
-    return;
 }
 
 /**
@@ -241,7 +239,11 @@ static void OnProtocolClose(const string& cmd, int par)
 static void OnReadVoltage(const string& cmd, int par) 
 {
     const uint32_t actualVoltage = 1212;
+#ifdef PLL_SOURCE_HSI
+    const uint32_t adcDivdr = 0x054E;
+#else
     const uint32_t adcDivdr = 0x0A3D;
+#endif    
     
     uint32_t adcValue = AdcDriver::read();
     

@@ -76,8 +76,6 @@ void AdptSendString(const util::string& str)
     glblUart->send(str);
 }
 
-const int UART_SPEED = 115200;
-
 /**
  * Adapter main loop
  */

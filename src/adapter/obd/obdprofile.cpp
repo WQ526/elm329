@@ -166,7 +166,8 @@ int OBDProfile::onRequestImpl(const string& cmdString)
 
     // The convoluted logic
     //
-    bool sendReply = (cmdString == OBD_TEST_SEQ);
+    bool sendReply = (cmdString == OBD_TEST_SEQ) && 
+        (OBDProfile::instance()->getProtocol() == PROT_AUTO);
     
     int protocol = 0;
     int sts = REPLY_NO_DATA;

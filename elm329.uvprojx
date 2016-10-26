@@ -50,7 +50,7 @@
           <OutputName>obdst16</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -230,7 +230,7 @@
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
-            <OptFeed>1</OptFeed>
+            <OptFeed>0</OptFeed>
             <NoZi1>0</NoZi1>
             <NoZi2>0</NoZi2>
             <NoZi3>0</NoZi3>
@@ -347,7 +347,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>0</OneElfS>
@@ -362,7 +362,7 @@
             <uC99>0</uC99>
             <useXO>0</useXO>
             <VariousControls>
-              <MiscControls>-DHSE_VALUE=12000000</MiscControls>
+              <MiscControls>-DHSE_VALUE3=12000000 -DSTM32F042x6 -DBLUETOOTH_MINI_CFG2 -DPLL_SOURCE_HSI</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
               <IncludePath>.\src\drv\stm32f0xx;.\src\util;.\STM32F0xx_StdPeriph_Driver\inc;.\src\adapter</IncludePath>

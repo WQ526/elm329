@@ -8,9 +8,15 @@
 #include "cortexm.h"
 #include "AdcDriver.h"
 
-const uint16_t AdcPin     = GPIO_Pin_0;
-const uint32_t AdcChannel = ADC_Channel_8;
-const GPIO_TypeDef* GPIOx = GPIOB;
+#ifdef BLUETOOTH_MINI_CFG
+  const uint16_t AdcPin     = GPIO_Pin_1;
+  const uint32_t AdcChannel = ADC_Channel_9;
+  const GPIO_TypeDef* GPIOx = GPIOB;
+#else
+  const uint16_t AdcPin     = GPIO_Pin_0;
+  const uint32_t AdcChannel = ADC_Channel_8;
+  const GPIO_TypeDef* GPIOx = GPIOB;
+#endif
 
 /**
  * Configuring comparator
