@@ -1,6 +1,0 @@
---cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat
--I.\RTE\_adapter
--Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
--Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include
--D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042
--o .\objects\autoadapter.o --omf_browse .\objects\autoadapter.crf --depend .\objects\autoadapter.d --feedback ".\Objects\obdst18.fed" "src\adapter\obd\autoadapter.cpp"
