@@ -26,12 +26,6 @@ void AdptLED::configure()
     RX_LED(0);
     TX_LED(0);
     txCount_ = rxCount_ = 0;
-    
-#ifdef BLUETOOTH_MINI_CFG
-    GPIOSetDir(POWER_LED_PORT, POWER_LED_NUM, GPIO_OUTPUT); // red
-    GPIOPinWrite(POWER_LED_PORT, POWER_LED_NUM, 1); // turn it on
-#endif
-    
 }
 
 /**

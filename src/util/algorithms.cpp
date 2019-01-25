@@ -19,9 +19,8 @@ namespace util {
  */
 void to_lower(string& str)
 {
-    for (int i = 0; i < str.length(); i++) {
-        str[i] = tolower(str[i]);
-    }
+    for (char& ch : str)
+        ch = tolower(ch);
 }
 
 /**
@@ -30,29 +29,8 @@ void to_lower(string& str)
  */
 void to_upper(string& str)
 {
-    for (int i = 0; i < str.length(); i++) {
-        str[i] = toupper(str[i]);
-    }
-}
-
-/**
- * Checks if string is a valid ASCII hex string
- * @param[in] str String to validate
- * @return 1 if valid, 0 otherwise
- */
-bool is_xdigits(const string& str)
-{
-    int len = str.length();
-    if (len == 0 || len % 2) {
-        return false; // Invalid string
-    }
-
-    for (int i = 0; i < len; i++) {
-        if (!isxdigit(str[i])) {
-            return false;
-        }
-    }
-    return true;
+    for (char& ch : str)
+        ch = toupper(ch);
 }
 
 /**
@@ -61,11 +39,10 @@ bool is_xdigits(const string& str)
  */
 void remove_space(string& str)
 {
-    int len = str.length();
     int j = 0;
-    for (int i = 0; i < len; i++) {
-        if (str[i] > ' ') { // Skip space or non-printable
-            str[j++] = str[i];
+    for (char& ch : str) {
+        if (ch > ' ') { // Skip space or non-printable
+            str[j++] = ch;
         }
     }
     str.resize(j);
@@ -82,7 +59,7 @@ uint32_t stoul(const string& str, uint32_t* pos, int base)
 {
     if (pos)
         *pos = str.length();
-    return strtoul(str.c_str(), 0, base);;
+    return strtoul(str.c_str(), 0, base);
 }
 
 /**
@@ -92,8 +69,8 @@ uint32_t stoul(const string& str, uint32_t* pos, int base)
  */
 char to_ascii(uint8_t byte)
 {
-    const char dispthTable[] = { '0', '1', '2', '3', '4', '5', '6', '7',
-                                 '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+    const char dispthTable[] { '0', '1', '2', '3', '4', '5', '6', '7',
+                               '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
     return (byte <= 0xF) ? dispthTable[byte] : 0;
 }
 

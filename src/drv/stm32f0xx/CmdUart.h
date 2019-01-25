@@ -10,10 +10,9 @@
 
 #include <cstdint>
 #include <lstring.h>
+#include <adaptertypes.h>
 
 using namespace std;
-
-const int TX_BUFFER_LEN = 100;
 
 typedef bool (*UartRecvHandler)(uint8_t ch);
 
@@ -28,6 +27,7 @@ public:
     bool ready() const { return ready_; }
     void ready(bool val) { ready_ = val; }
     void handler(UartRecvHandler handler) { handler_ = handler; }
+    void enableReceive(bool val);
 private:
     CmdUart();
     void txIrqHandler();

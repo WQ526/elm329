@@ -18,6 +18,7 @@ class Timer {
 public:
     const static int TIMER0 = 0;
     const static int TIMER1 = 1;
+    const static int TIMER2 = 2;
     static void configure();
     static Timer* instance(int timerNum);
     void start(uint32_t interval);
@@ -25,6 +26,13 @@ public:
 protected:
     Timer(int timerNum);
     TIM_TypeDef* timer_;
+};
+
+class LongTimer : public Timer {
+public:
+    static LongTimer* instance();
+private:
+    LongTimer();
 };
 
 // For use with Rx/Tx LEDs

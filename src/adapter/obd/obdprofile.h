@@ -10,6 +10,8 @@
 
 #include "padapter.h"
 
+class DataCollector;
+
 class OBDProfile {
 private:
     OBDProfile();
@@ -19,14 +21,17 @@ public:
     void getProtocolDescription() const;
     void getProtocolDescriptionNum() const;
     int setProtocol(int protocol, bool refreshConnection);
+    void sendHeartBeat();
     void dumpBuffer();
     void closeProtocol();
-    void onRequest(const util::string& cmdString);
+    void onRequest(const DataCollector* collector);
     int getProtocol() const;
     void wiringCheck();
+    int kwDisplay();
+    void setFilterAndMask();
 private:
-    bool sendLengthCheck(const uint8_t* msg, int len);
-    int onRequestImpl(const util::string& cmdString);
+    bool sendLengthCheck(int len);
+    int onRequestImpl(const DataCollector* collector);
     ProtocolAdapter* adapter_;
 };
 

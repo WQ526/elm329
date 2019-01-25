@@ -16,7 +16,6 @@ namespace util {
     void to_upper(string& str);
     void remove_space(string& str);
     uint32_t stoul(const string& str, uint32_t* pos = 0, int base = 10);
-    bool is_xdigits(const string& str);
     char to_ascii(uint8_t byte);
     
 }

@@ -8,7 +8,7 @@
 #include "cortexm.h"
 #include "GpioDrv.h"
 
-static GPIO_TypeDef* const GPIOPtr[]  = { GPIOA, GPIOB, GPIOC };
+static GPIO_TypeDef* const GPIOPtr[]  = { GPIOA, GPIOB, GPIOC, GPIOD, GPIOE };
 
 /**
  * Enabling GPIOx clock
@@ -29,16 +29,16 @@ void GPIOSetDir(uint32_t portNum, uint32_t pinNum, uint32_t dir)
 {
     GPIO_TypeDef* gpio = GPIOPtr[portNum];
     if (dir == GPIO_OUTPUT) {
-        gpio->ODR     &= ~(1UL << 8);          // Output data, set to 0
-        gpio->MODER   &= ~(3UL << 2 * pinNum);
-        gpio->MODER   |= (1UL << 2 * pinNum);  // Output mode
-        gpio->OTYPER  &= ~(1UL << pinNum);     // Output push-pull
-        gpio->OSPEEDR |= (3UL << 2 * pinNum);  // Port output 50 MHz High speed
-        gpio->PUPDR   &= ~(3UL << 2 * pinNum); // No pull-up, pull-down
+        gpio->MODER   &= ~(0x00000003         << pinNum * 2);  // Clear it
+        gpio->MODER   |=  (GPIO_Mode_OUT      << pinNum * 2);  // Output mode
+        gpio->OTYPER  &= ~(0x00000001         << pinNum);      // Output push-pull by clearing the flag
+        gpio->OSPEEDR &= ~(0x00000003         << pinNum * 2);  // Clear it
+        gpio->OSPEEDR |=  (GPIO_Speed_Level_2 << pinNum * 2);  // Port output speed Medium 10 MHz
+        gpio->PUPDR   &= ~(0x00000003         << pinNum * 2);  // No pull-up or pull-down by clearing the flag
     }
     else {
-        gpio->MODER &= ~(3UL << 2 * pinNum);   // Input mode
-        gpio->PUPDR &= ~(3UL << 2 * pinNum);   // No pull-up, pull-down
+        gpio->MODER &= ~(0x00000003 << pinNum * 2); // Input mode by clearing the flag
+        gpio->PUPDR &= ~(0x00000003 << 2 * pinNum); // No pull-up or pull-down by clearing the flag
     }
 }
 
@@ -50,7 +50,7 @@ void GPIOSetDir(uint32_t portNum, uint32_t pinNum, uint32_t dir)
  */
 void GPIOPinWrite(uint32_t portNum, uint32_t pinNum, uint32_t val)
 {
-    GPIOPtr[portNum]->BSRR = val ? (1UL << pinNum) : (1UL << (pinNum + 16));
+    GPIOPtr[portNum]->BSRR = val ? (0x01 << pinNum) : (0x01 << (pinNum + 16));
 }
 
 /**
@@ -61,9 +61,8 @@ void GPIOPinWrite(uint32_t portNum, uint32_t pinNum, uint32_t val)
  */
 uint32_t GPIOPinRead (uint32_t portNum, uint32_t pinNum)
 {
-    return (GPIOPtr[portNum]->IDR & (1UL << pinNum)) ? 1 : 0;
+    return (GPIOPtr[portNum]->IDR & (0x01 << pinNum)) ? 1 : 0;
 }
-
 
 /**
  * Setting CPU-specific port attributes, like open drain and etc.
@@ -73,8 +72,33 @@ uint32_t GPIOPinRead (uint32_t portNum, uint32_t pinNum)
  */
 void GPIOPinConfig(uint32_t portNum, uint32_t pinNum, uint32_t val)
 {
-    GPIO_TypeDef* gpio = GPIOPtr[portNum];
     if (val == GPIO_OPEN_DRAIN) {
-        gpio->OTYPER |= (1UL << pinNum);
+        GPIOPtr[portNum]->OTYPER |= (0x01 << pinNum);
     }
+}
+
+/**
+ * Configure the GPIO I/O mode
+ * @param[in] portNum GPIO number (0..7)
+ * @param[in] pinNum Port pin number
+ * @param[in] mode Mode for the pin, GPIO_Mode_IN,GPIO_Mode_OUT,GPIO_Mode_AF
+ */
+void GPIOPinModeConfig(uint32_t portNum, uint32_t pinNum, uint32_t mode)
+{
+    GPIO_TypeDef* gpio = GPIOPtr[portNum];
+    gpio->MODER &= ~(GPIO_MODER_MODER0 << (pinNum * 2));
+    gpio->MODER |= (mode << (pinNum * 2));
+}
+
+/**
+ * Configure the GPIO AF
+ * @param[in] portNum GPIO number (0..7)
+ * @param[in] pinNum Port pin number
+ * @param[in] modeAF AF value for the pin, GPIO_AF_0 - GPIO_AF_5
+ */
+void GPIOPinAFConfig(uint32_t portNum, uint32_t pinNum, uint32_t modeAF)
+{
+    GPIO_TypeDef* gpio = GPIOPtr[portNum];
+    gpio->AFR[pinNum >> 0x03] &= ~(0x0F << ((pinNum & 0x07) * 4));
+    gpio->AFR[pinNum >> 0x03] |= modeAF << ((pinNum & 0x07) * 4);
 }

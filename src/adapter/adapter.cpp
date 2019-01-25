@@ -1,7 +1,7 @@
 /**
  * See the file LICENSE for redistribution information.
  *
- * Copyright (c) 2009-2016 ObdDiag.Net. All rights reserved.
+ * Copyright (c) 2009-2017 ObdDiag.Net. All rights reserved.
  *
  */
 
@@ -14,12 +14,13 @@
 #include <AdcDriver.h>
 #include <led.h>
 #include <adaptertypes.h>
+#include <datacollector.h>
 
 using namespace std;
 using namespace util;
 
-static string CmdBuffer(RX_CMD_LEN);
 static CmdUart* glblUart;
+static DataCollector* collector = DataCollector::instance();
 
 /**
  * Enable the clocks and peripherals, initialize the drivers
@@ -27,8 +28,8 @@ static CmdUart* glblUart;
 static void SetAllRegisters()
 {
     Timer::configure();
-    GPIOConfigure(0);
-    GPIOConfigure(1);
+    GPIOConfigure(0);    // GPIOA clock
+    GPIOConfigure(1);    // GPIOB clock
     CmdUart::configure();
     CanDriver::configure();
     AdptLED::configure();
@@ -41,13 +42,8 @@ static void SetAllRegisters()
  */
 static bool UserUartRcvHandler(uint8_t ch)
 {
-    static string cmdBuffer(RX_BUFFER_LEN);
     bool ready = false;
     
-    if (cmdBuffer.length() >= (RX_BUFFER_LEN - 1)) {
-        cmdBuffer.resize(0); // Truncate it
-    }
-
     if (AdapterConfig::instance()->getBoolProperty(PAR_ECHO) && ch != '\n') {
         glblUart->send(ch);
         if (ch == '\r' && AdapterConfig::instance()->getBoolProperty(PAR_LINEFEED)) {
@@ -56,12 +52,10 @@ static bool UserUartRcvHandler(uint8_t ch)
     }
     
     if (ch == '\r') { // Got cmd terminator
-        CmdBuffer = cmdBuffer;
-        cmdBuffer.resize(0);
         ready = true;
     }
     else if (isprint(ch)) { // this will skip '\n' as well
-        cmdBuffer += ch;
+        collector->putChar(ch);
     }
     
     return ready;
@@ -90,10 +84,12 @@ static void AdapterRun()
     for(;;) {    
         if (glblUart->ready()) {
             glblUart->ready(false);
-            AdptOnCmd(CmdBuffer);
+            AdptOnCmd(collector);
+            collector->reset();
         }
-        //__WFI(); // goto sleep
+        __WFI(); // goto sleep
     }
+
 }
 
 int main(void)

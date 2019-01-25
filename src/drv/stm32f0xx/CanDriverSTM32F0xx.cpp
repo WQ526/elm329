@@ -72,6 +72,10 @@ void CanDriver::configure()
 {
     // Enable the clock for the CAN
     RCC->APB1ENR |= RCC_APB1Periph_CAN;
+    
+    // Remap PA11-12 to PA9-10 for CAN
+    RCC->APB2ENR |= RCC_APB2ENR_SYSCFGCOMPEN;
+    SYSCFG->CFGR1 |= SYSCFG_CFGR1_PA11_PA12_RMP;
 
     // Connect PA12 to CAN_Tx, PA11 to CAN_Rx, use alternate function AF4
     GPIO_PinAFConfig(GPIOPtr[CanRxPort], CanRxPin, CAN_AF);
@@ -141,8 +145,18 @@ bool CanDriver::send(const CanMsgBuffer* buff)
     msg.RTR   = CAN_RTR_Data;
     msg.DLC   = buff->dlc;
     memcpy(msg.Data, buff->data, 8);
-    uint8_t val = CAN_Transmit(CAN, &msg);
-    return (val != CAN_TxStatus_NoMailBox);
+    
+    uint8_t mailboxNum = CAN_Transmit(CAN, &msg);
+    if (mailboxNum != CAN_TxStatus_NoMailBox) {
+        uint32_t tuplePos = mailboxNum * 8;
+        volatile uint32_t tuple = 0;
+        do {
+            tuple = (CAN->TSR >> tuplePos) & 0x0F;
+        } while ((tuple & 0x01) == 0);
+        
+        return (tuple & 0x02); // 0x03 -> success (RQCP and TXOK set), other -> error
+    }
+    return false; // No empty mailbox!
 }
 
 /**

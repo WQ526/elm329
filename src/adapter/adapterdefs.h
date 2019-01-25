@@ -11,23 +11,14 @@
 #ifdef  __CC_ARM
   #define unique_ptr auto_ptr
   #define nullptr    NULL
+#elif  __ARMCC_VERSION
 #elif  __GNUC__ 
 #endif
-
-#ifdef BLUETOOTH_MINI_CFG
-  const int UART_SPEED     =  38400;
-  const int TX_LED_PORT    =  1;
-  const int RX_LED_PORT    =  1;
-  const int POWER_LED_PORT =  1;
-  const int TX_LED_NUM     =  3;
-  const int RX_LED_NUM     =  4;
-  const int POWER_LED_NUM  =  5;
-#else
-  const int UART_SPEED     =  115200;
-  const int TX_LED_PORT    =  0;
-  const int RX_LED_PORT    =  0;
-  const int TX_LED_NUM     =  7;
-  const int RX_LED_NUM     =  6;
-#endif
+  
+const int UART_SPEED     =  115200;
+const int TX_LED_PORT    =  0;
+const int RX_LED_PORT    =  0;
+const int TX_LED_NUM     =  0;
+const int RX_LED_NUM     =  1;
   
 #endif //__ADAPTER_DEFS_H__

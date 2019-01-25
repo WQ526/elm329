@@ -12,6 +12,22 @@
 using namespace util;
 
 /**
+ * Constructs ProtocolAdater
+ */
+ProtocolAdapter::ProtocolAdapter()
+{ 
+    config_ = AdapterConfig::instance();
+    close();
+}
+
+void ProtocolAdapter::close()
+{
+    connected_ = false;
+    sts_ = REPLY_NO_DATA;
+    sampleSent_ = false;
+}
+
+/**
  * ProtocolAdapter object factory
  * @param[in] adapterType The adapter type number
  * @return The ProtocolAdapter pointer
@@ -21,7 +37,7 @@ ProtocolAdapter* ProtocolAdapter::getAdapter(int adapterType)
     static AutoAdapter autoAdapter;
     static IsoCan11Adapter canAdapter;
     static IsoCan29Adapter canExtAdapter;
-
+    
     switch (adapterType) {
         case ADPTR_AUTO:
             return &autoAdapter;
@@ -32,11 +48,4 @@ ProtocolAdapter* ProtocolAdapter::getAdapter(int adapterType)
         default:
             return nullptr;
     }
-}
-
-/**
- * Print the current history for debug purposes
- */
-void ProtocolAdapter::dumpBuffer()
-{
 }

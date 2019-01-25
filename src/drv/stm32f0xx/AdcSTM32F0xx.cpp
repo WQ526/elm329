@@ -8,15 +8,10 @@
 #include "cortexm.h"
 #include "AdcDriver.h"
 
-#ifdef BLUETOOTH_MINI_CFG
-  const uint16_t AdcPin     = GPIO_Pin_1;
-  const uint32_t AdcChannel = ADC_Channel_9;
-  const GPIO_TypeDef* GPIOx = GPIOB;
-#else
-  const uint16_t AdcPin     = GPIO_Pin_0;
-  const uint32_t AdcChannel = ADC_Channel_8;
-  const GPIO_TypeDef* GPIOx = GPIOB;
-#endif
+// ADC connected to PA5/ADC_IN5
+const uint16_t AdcPin     = GPIO_Pin_5;
+const uint32_t AdcChannel = ADC_Channel_5;
+const GPIO_TypeDef* GPIOx = GPIOA;
 
 /**
  * Configuring comparator
@@ -29,7 +24,7 @@ void AdcDriver::configure()
     // Enable ADC1 clock
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
     
-    // GPIOA Periph clock enableed in PalGPIO_InitClock()
+    // GPIOA Periph clock should be enabled already
     
     // Configure ADC Channel0 as analog input
     GPIO_InitTypeDef GPIO_InitStruct;
@@ -38,7 +33,7 @@ void AdcDriver::configure()
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
     GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
-    GPIO_Init(const_cast<GPIO_TypeDef*>(GPIOB), &GPIO_InitStruct);
+    GPIO_Init(const_cast<GPIO_TypeDef*>(GPIOx), &GPIO_InitStruct);
 
     // Initialize ADC structure
     ADC_InitTypeDef ADC_InitStruct;
@@ -70,6 +65,7 @@ uint32_t AdcDriver::read()
     // Get ADC1 converted data
     uint16_t adcValue = ADC_GetConversionValue(ADC1);
     
+    ADC_StopOfConversion(ADC1);
     ADC_Cmd(ADC1, DISABLE);
     return adcValue;
 }

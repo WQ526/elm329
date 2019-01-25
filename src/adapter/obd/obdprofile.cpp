@@ -5,7 +5,9 @@
  *
  */
 
+#include <cstdio>
 #include "obdprofile.h"
+#include <datacollector.h>
 
 using namespace util;
 
@@ -74,6 +76,7 @@ int OBDProfile::setProtocol(int num, bool refreshConnection)
             adapter_ = ProtocolAdapter::getAdapter(ADPTR_AUTO);
             break;
         case PROT_ISO15765_1150:
+        case PROT_ISO15765_USR_B:
             adapter_ = ProtocolAdapter::getAdapter(ADPTR_CAN);
             break;
         case PROT_ISO15765_2950:
@@ -94,12 +97,14 @@ int OBDProfile::setProtocol(int num, bool refreshConnection)
 
 /**
  * The entry for ECU send/receive function
- * @param[in] cmdString The command
+ * @param[in] collector The command
  * @return The status code
  */
-void OBDProfile::onRequest(const string& cmdString)
+void OBDProfile::onRequest(const DataCollector* collector)
 {
-    int result = onRequestImpl(cmdString);
+    char prefix[12];
+    
+    int result = onRequestImpl(collector);
     switch(result) {
         case REPLY_CMD_WRONG:
             AdptSendReply(ErrMessage);
@@ -129,8 +134,13 @@ void OBDProfile::onRequest(const string& cmdString)
             AdptSendReply(Err5Message);
             break;        
         case REPLY_NONE:
+        case 0:
+            break;
+        case REPLY_OK:
             break;
         default:
+            sprintf(prefix, "%X ", result);
+            AdptSendString(prefix);
             AdptSendReply(Err0Message);
             break;
     }
@@ -138,54 +148,60 @@ void OBDProfile::onRequest(const string& cmdString)
 
 /**
  * The actual implementation of request handler
- * @param[in] cmdString The command
+ * @param[in] collector The command
  * @return The status code
  */
-int OBDProfile::onRequestImpl(const string& cmdString)
+int OBDProfile::onRequestImpl(const DataCollector* collector)
 {
     const char* OBD_TEST_SEQ = "0100";
-    uint8_t data[OBD_IN_MSG_LEN];
-
-    // Buffer overrun check,
-    // should be less then (11 * 2) => 22 characters
-    if (cmdString.length() > (sizeof(data) * 2)) {
-        return REPLY_CMD_WRONG;
-    }
-
-    int len = to_bytes(cmdString, data);
 
     // Valid request length?
-    if (!sendLengthCheck(data, len)) {
+    if (!sendLengthCheck(collector->getLength())) {
         return REPLY_DATA_ERROR;
     }
 
     // The regular flow stops here
     if (adapter_->isConnected()) {
-        return adapter_->onRequest(data, len);
+        return adapter_->onRequest(collector->getData(), collector->getLength()); //1
     } 
 
-    // The convoluted logic
+    // Convoluted logic
     //
-    bool sendReply = (cmdString == OBD_TEST_SEQ) && 
-        (OBDProfile::instance()->getProtocol() == PROT_AUTO);
-    
+    bool sendReply = (collector->getString() == OBD_TEST_SEQ);
     int protocol = 0;
     int sts = REPLY_NO_DATA;
+    
     ProtocolAdapter* autoAdapter = ProtocolAdapter::getAdapter(ADPTR_AUTO);
+    autoAdapter->sampleSent(false);
+    
     if (adapter_ == autoAdapter) {
-        protocol = autoAdapter->onConnectEcu(sendReply);
+        protocol = autoAdapter->onTryConnectEcu(sendReply);
+        // onConnectEcu() not returning status, just query it
+        sts = autoAdapter->getStatus();
     }
     else {
-        protocol = adapter_->onConnectEcu(sendReply);
         bool useAutoSP = AdapterConfig::instance()->getBoolProperty(PAR_USE_AUTO_SP);
-        if (protocol == 0 && useAutoSP) {
-            protocol = autoAdapter->onConnectEcu(sendReply);
+        if (useAutoSP) {
+            protocol = adapter_->onTryConnectEcu(sendReply); // returns 0 if nost succeeded
+        }
+        else {
+            protocol = adapter_->onConnectEcu(); // always return protocol number, not 0
+        }
+        
+        sts = adapter_->getStatus();
+        if (protocol == 0 && useAutoSP) { //&& sts == REPLY_NO_DATA
+            protocol = autoAdapter->onTryConnectEcu(sendReply);
+            // and get status one more time
+            sts = autoAdapter->getStatus(); //4
         }
     }
+    
+    // ISO9141/14230 do not send any commands to ECU
+    // but CAN do if 
     if (protocol) {
         setProtocol(protocol, false);
-        if (!sendReply) {
-            sts = adapter_->onRequest(data, len);
+        if (!autoAdapter->isSampleSent()) {
+            sts = adapter_->onRequest(collector->getData(), collector->getLength()); //5
         }
         else {
             sts = REPLY_NONE; //the command sent already as part of autoconnect
@@ -196,15 +212,18 @@ int OBDProfile::onRequestImpl(const string& cmdString)
 
 /**
  * Check the maximum length for OBD request
- * @param[in] msg The request bytes
  * @param[in] len The request length
  * @return true if set, false otherwise
  */
-bool OBDProfile::sendLengthCheck(const uint8_t* msg, int len)
+bool OBDProfile::sendLengthCheck(int len)
 {
-    int maxLen = OBD_IN_MSG_DLEN;
+    int maxLen = OBD_IN_MSG_DLEN; // set to 255
 
-    if ((len == 0) ||len > maxLen) {
+    // For KWP use maxlen=8
+    //if (adapter_ ==  ProtocolAdapter::getAdapter(ADPTR_ISO)) {
+    //    maxLen++;
+    //}
+    if ((len == 0) || len > maxLen) { // 255 bytes
         return false;
     }
     return true;
@@ -217,7 +236,23 @@ int OBDProfile::getProtocol() const
 
 void OBDProfile::closeProtocol()
 {
-    adapter_->closeProtocol();
+    adapter_->close();
+}
+
+/**
+ * ISO KW1,KW2 display, applies only to 9141/14230 adapter
+ */
+int OBDProfile::kwDisplay()
+{
+    return REPLY_OK;
+}
+
+/**
+ * ISO 9141/14230 hearbeat, implemented only in ISO serial adapter
+ */
+void OBDProfile::sendHeartBeat()
+{
+    adapter_->sendHeartBeat();
 }
 
 /**
@@ -228,11 +263,7 @@ void OBDProfile::wiringCheck()
     ProtocolAdapter::getAdapter(ADPTR_CAN)->wiringCheck();
 }
 
-/**
- * Constructs ProtocolAdapter
- */
-ProtocolAdapter::ProtocolAdapter()
-{ 
-    connected_ = false;
-    config_ = AdapterConfig::instance();
+void OBDProfile::setFilterAndMask()
+{
+    adapter_->setFilterAndMask();
 }

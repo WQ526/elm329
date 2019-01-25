@@ -23,6 +23,8 @@ void GPIOConfigure(uint32_t portNum);
 void GPIOSetDir(uint32_t portNum, uint32_t pinNum, uint32_t dir);
 void GPIOPinWrite(uint32_t portNum, uint32_t pinNum, uint32_t val);
 void GPIOPinConfig(uint32_t portNum, uint32_t pinNum, uint32_t val);
+void GPIOPinModeConfig(uint32_t portNum, uint32_t pinNum, uint32_t mode);
+void GPIOPinAFConfig(uint32_t portNum, uint32_t pinNum, uint32_t modeAF);
 uint32_t GPIOPinRead(uint32_t port_num, uint32_t pin_num);
 
 

@@ -12,21 +12,13 @@
 
 using namespace std;
 
-#ifdef BLUETOOTH_MINI_CFG
-  const int TxPin = 2;
-  const int RxPin = 3;
-  USART_TypeDef* USARTx = USART2;
-  IRQn_Type USARTx_IRQn = USART2_IRQn;
-#else
-  const int TxPin = 9;
-  const int RxPin = 10;
-  USART_TypeDef* USARTx = USART1;
-  IRQn_Type USARTx_IRQn = USART1_IRQn;
-#endif
-
+const int TxPin = 2;
+const int RxPin = 3;
 const int USER_AF = GPIO_AF_1;
-#define RxPort  GPIOA
-#define TxPort  GPIOA
+#define USARTx      USART2
+#define USARTx_IRQn USART2_IRQn
+#define RxPort      GPIOA
+#define TxPort      GPIOA
 
 
 /**
@@ -57,14 +49,10 @@ void CmdUart::configure()
     // Enable the peripheral clock of GPIOA
     RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
     
-    // Enable the peripheral clock USART1/2
-#ifdef BLUETOOTH_MINI_CFG
+    // Enable the peripheral clock USART2
     RCC->APB1ENR |= RCC_APB1ENR_USART2EN;
-#else
-    RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
-#endif
 
-    // GPIO configuration for USART1 signals
+    // GPIO configuration for USART2 signals
     // Select AF mode on Tx/Rx pins
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Pin = (1 << TxPin) | (1 << RxPin);
@@ -189,15 +177,24 @@ void CmdUart::send(const util::string& str)
     }
 }
 
+void CmdUart::enableReceive(bool val)
+{
+    if (val) {
+        // Clear overrun and RXNE
+        USARTx->ICR |= USART_ICR_ORECF;
+        USARTx->RQR |= USART_RQR_RXFRQ;
+        USARTx->CR1 |= USART_CR1_RE;
+    }
+    else {
+        USARTx->CR1 &= ~USART_CR1_RE;
+    }
+}
+
+
 /**
  * UARTx IRQ Handler, redirect to irqHandler
  */
-#ifdef BLUETOOTH_MINI_CFG
 extern "C" void USART2_IRQHandler(void)
-#else
-extern "C" void USART1_IRQHandler(void)
-#endif
 {
-    if (CmdUart::instance())
-        CmdUart::instance()->irqHandler();
+    CmdUart::instance()->irqHandler();
 }

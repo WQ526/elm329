@@ -22,7 +22,7 @@ static string UIDToString(uint32_t uid[])
     string str(40);
 
     for (int j = 0; j < 4; j++) {
-        NumericType value(uid[j]);
+        IntAggregate value(uid[j]);
 
         for (int i = 3; i >= 0; i--) {
             str += to_ascii(value.bvalue[i] >> 4);
@@ -35,7 +35,7 @@ static string UIDToString(uint32_t uid[])
 }
 
 /**
- * Display the LPC15XX CPU UID 
+ * Display the STM32F042 CPU UID 
  */
 void AdptReadSerialNum()
 {
