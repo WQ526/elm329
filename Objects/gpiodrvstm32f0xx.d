@@ -1,0 +1,17 @@
+.\objects\gpiodrvstm32f0xx.o: src\drv\stm32f0xx\GpioDrvSTM32F0xx.cpp
+.\objects\gpiodrvstm32f0xx.o: src\drv\stm32f0xx\cortexm.h
+.\objects\gpiodrvstm32f0xx.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h
+.\objects\gpiodrvstm32f0xx.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h
+.\objects\gpiodrvstm32f0xx.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h
+.\objects\gpiodrvstm32f0xx.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h
+.\objects\gpiodrvstm32f0xx.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h
+.\objects\gpiodrvstm32f0xx.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h
+.\objects\gpiodrvstm32f0xx.o: src\drv\stm32f0xx\GpioDrv.h
+.\objects\gpiodrvstm32f0xx.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\cstdint

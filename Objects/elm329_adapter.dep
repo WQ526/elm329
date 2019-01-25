@@ -1,0 +1,457 @@
+Dependencies for Project 'elm329', Target 'adapter': (DO NOT MODIFY !)
+F (.\src\adapter\adapter.cpp)(0x5A470D0D)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\adapter.o --omf_browse .\objects\adapter.crf --depend .\objects\adapter.d)
+I (.\src\util\lstring.h)(0x5A761534)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cctype)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x588C3A14)
+I (.\src\drv\stm32f0xx\Timer.h)(0x592F5AEE)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\src\drv\stm32f0xx\GPIODrv.h)(0x5A527BD7)
+I (.\src\drv\stm32f0xx\CmdUart.h)(0x58825E08)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (.\src\drv\stm32f0xx\CanDriver.h)(0x571A3145)
+I (.\src\drv\stm32f0xx\AdcDriver.h)(0x56DD71F2)
+I (.\src\drv\stm32f0xx\led.h)(0x56DD71F2)
+I (.\src\adapter\datacollector.h)(0x58B993FD)
+F (.\src\adapter\adapterconfig.cpp)(0x5A713149)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\adapterconfig.o --omf_browse .\objects\adapterconfig.crf --depend .\objects\adapterconfig.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (.\src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+F (.\src\adapter\datacollector.cpp)(0x58B99A0B)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\datacollector.o --omf_browse .\objects\datacollector.crf --depend .\objects\datacollector.d)
+I (d:\Keil_v5\ARM\ARMCC\include\climits)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cctype)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\memory)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\new)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\exception)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\utility)(0x4EB261B6)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_defs.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_config.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\config.h)(0x5311110C)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_iterbase.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\cstddef)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_mutex.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdlib)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588C3A14)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (src\adapter\datacollector.h)(0x58B993FD)
+F (.\src\adapter\functions.cpp)(0x5993A75A)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\functions.o --omf_browse .\objects\functions.crf --depend .\objects\functions.d)
+I (d:\Keil_v5\ARM\ARMCC\include\climits)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588C3A14)
+I (.\src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (.\src\util\lstring.h)(0x5A761534)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (.\src\util\algorithms.h)(0x58B99532)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+F (.\src\adapter\dispatcher.cpp)(0x5B10CD23)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\dispatcher.o --omf_browse .\objects\dispatcher.crf --depend .\objects\dispatcher.d)
+I (d:\Keil_v5\ARM\ARMCC\include\climits)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\limits.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdio)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588C3A14)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (src\adapter\datacollector.h)(0x58B993FD)
+I (.\src\adapter\obd/j1979.h)(0x58C40A7E)
+I (src\adapter\obd/obdprofile.h)(0x58A88510)
+I (src\adapter\obd/padapter.h)(0x5A76158E)
+I (.\src\util\algorithms.h)(0x58B99532)
+I (.\src\drv\stm32f0xx\CmdUart.h)(0x58825E08)
+I (.\src\drv\stm32f0xx\AdcDriver.h)(0x56DD71F2)
+I (.\src\adapter\obd/isocan.h)(0x5A760E4A)
+F (.\src\drv\stm32f0xx\AdcSTM32F0xx.cpp)(0x5A470E18)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\adcstm32f0xx.o --omf_browse .\objects\adcstm32f0xx.crf --depend .\objects\adcstm32f0xx.d)
+I (src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (src\drv\stm32f0xx\AdcDriver.h)(0x56DD71F2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+F (.\src\drv\stm32f0xx\CanDriverSTM32F0xx.cpp)(0x5C0096B5)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\candriverstm32f0xx.o --omf_browse .\objects\candriverstm32f0xx.crf --depend .\objects\candriverstm32f0xx.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdlib)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588C3A14)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (src\drv\stm32f0xx\CanDriver.h)(0x571A3145)
+I (src\drv\stm32f0xx\GPIODrv.h)(0x5A527BD7)
+I (.\src\util\canmsgbuffer.h)(0x5A726D7C)
+I (.\src\drv\stm32f0xx\led.h)(0x56DD71F2)
+F (.\src\drv\stm32f0xx\CmdUartSTM32F0xx.cpp)(0x5A41A325)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\cmduartstm32f0xx.o --omf_browse .\objects\cmduartstm32f0xx.crf --depend .\objects\cmduartstm32f0xx.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (src\drv\stm32f0xx\GPIODrv.h)(0x5A527BD7)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (src\drv\stm32f0xx\CmdUart.h)(0x58825E08)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+F (.\src\drv\stm32f0xx\SysutilitySTM32F0xx.cpp)(0x5B323E17)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\sysutilitystm32f0xx.o --omf_browse .\objects\sysutilitystm32f0xx.crf --depend .\objects\sysutilitystm32f0xx.d)
+I (.\src\util\lstring.h)(0x5A761534)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (.\src\util\algorithms.h)(0x58B99532)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+F (.\src\drv\stm32f0xx\GpioDrvSTM32F0xx.cpp)(0x5A5260EE)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\gpiodrvstm32f0xx.o --omf_browse .\objects\gpiodrvstm32f0xx.crf --depend .\objects\gpiodrvstm32f0xx.d)
+I (src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (src\drv\stm32f0xx\GpioDrv.h)(0x5A527BD7)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+F (.\src\drv\stm32f0xx\TimerSTM32F0xx.cpp)(0x592F5AF9)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\timerstm32f0xx.o --omf_browse .\objects\timerstm32f0xx.crf --depend .\objects\timerstm32f0xx.d)
+I (src\drv\stm32f0xx\cortexm.h)(0x571A78A4)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (src\drv\stm32f0xx\Timer.h)(0x592F5AEE)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+F (.\src\drv\stm32f0xx\led.cpp)(0x5A403016)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (.\src\drv\stm32f0xx\Timer.h)(0x592F5AEE)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\src\drv\stm32f0xx\GPIODrv.h)(0x5A527BD7)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (src\drv\stm32f0xx\led.h)(0x56DD71F2)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c)(0x5717A1D6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\stm32f0xx_gpio.o --omf_browse .\objects\stm32f0xx_gpio.crf --depend .\objects\stm32f0xx_gpio.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c)(0x5712EB8B)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\stm32f0xx_rcc.o --omf_browse .\objects\stm32f0xx_rcc.crf --depend .\objects\stm32f0xx_rcc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_tim.c)(0x5712EACD)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\stm32f0xx_tim.o --omf_browse .\objects\stm32f0xx_tim.crf --depend .\objects\stm32f0xx_tim.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c)(0x5717A1D6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\stm32f0xx_usart.o --omf_browse .\objects\stm32f0xx_usart.crf --depend .\objects\stm32f0xx_usart.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_can.c)(0x571A366A)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\stm32f0xx_can.o --omf_browse .\objects\stm32f0xx_can.crf --depend .\objects\stm32f0xx_can.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_adc.c)(0x571A7BE5)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\stm32f0xx_adc.o --omf_browse .\objects\stm32f0xx_adc.crf --depend .\objects\stm32f0xx_adc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x52E2C436)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x52E2C436)
+F (.\src\adapter\obd\autoadapter.cpp)(0x5A403722)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\autoadapter.o --omf_browse .\objects\autoadapter.crf --depend .\objects\autoadapter.d)
+I (src\adapter\obd\autoadapter.h)(0x598F6B40)
+I (src\adapter\obd\padapter.h)(0x5A76158E)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+F (.\src\adapter\obd\canformatter.cpp)(0x59A607D5)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\canformatter.o --omf_browse .\objects\canformatter.crf --depend .\objects\canformatter.d)
+I (d:\Keil_v5\ARM\ARMCC\include\memory)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\new)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\exception)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\utility)(0x4EB261B6)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_defs.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_config.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\config.h)(0x5311110C)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_iterbase.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\cstddef)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_mutex.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdio)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588C3A14)
+I (.\src\util\canmsgbuffer.h)(0x5A726D7C)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (src\adapter\obd\isocan.h)(0x5A760E4A)
+I (src\adapter\obd\padapter.h)(0x5A76158E)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+F (.\src\adapter\obd\canhistory.cpp)(0x56E45D25)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\canhistory.o --omf_browse .\objects\canhistory.crf --depend .\objects\canhistory.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (src\adapter\obd\canhistory.h)(0x5802AE6D)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (.\src\util\canmsgbuffer.h)(0x5A726D7C)
+F (.\src\adapter\obd\isocan.cpp)(0x5A760E55)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\isocan.o --omf_browse .\objects\isocan.crf --depend .\objects\isocan.d)
+I (d:\Keil_v5\ARM\ARMCC\include\memory)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\new)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\exception)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\utility)(0x4EB261B6)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_defs.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_config.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\config.h)(0x5311110C)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_iterbase.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\cstddef)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_mutex.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdio)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588C3A14)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (.\src\drv\stm32f0xx\Timer.h)(0x592F5AEE)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)
+I (.\src\drv\stm32f0xx\candriver.h)(0x571A3145)
+I (.\src\drv\stm32f0xx\led.h)(0x56DD71F2)
+I (.\src\util\canmsgbuffer.h)(0x5A726D7C)
+I (.\src\util\algorithms.h)(0x58B99532)
+I (src\adapter\obd\obdprofile.h)(0x58A88510)
+I (src\adapter\obd\padapter.h)(0x5A76158E)
+I (src\adapter\obd\j1979.h)(0x58C40A7E)
+I (src\adapter\obd\isocan.h)(0x5A760E4A)
+I (src\adapter\obd\canhistory.h)(0x5802AE6D)
+F (.\src\adapter\obd\obdprofile.cpp)(0x5A403746)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\obdprofile.o --omf_browse .\objects\obdprofile.crf --depend .\objects\obdprofile.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdio)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588C3A14)
+I (src\adapter\obd\obdprofile.h)(0x58A88510)
+I (src\adapter\obd\padapter.h)(0x5A76158E)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (.\src\adapter\datacollector.h)(0x58B993FD)
+F (.\src\adapter\obd\padapter.cpp)(0x5A760E01)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\padapter.o --omf_browse .\objects\padapter.crf --depend .\objects\padapter.d)
+I (src\adapter\obd\padapter.h)(0x5A76158E)
+I (.\src\adapter\adaptertypes.h)(0x5BFCCEB2)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (.\src\util\lstring.h)(0x5A761534)
+I (.\src\adapter\adapterdefs.h)(0x5A402FF3)
+I (src\adapter\obd\autoadapter.h)(0x598F6B40)
+I (src\adapter\obd\isocan.h)(0x5A760E4A)
+F (.\src\util\algorithms.cpp)(0x5A726EC1)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\algorithms.o --omf_browse .\objects\algorithms.crf --depend .\objects\algorithms.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cctype)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdlib)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588C3A14)
+I (src\util\algorithms.h)(0x58B99532)
+I (src\util\lstring.h)(0x5A761534)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+F (.\src\util\canmsgbuffer.cpp)(0x56DD71F2)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\canmsgbuffer.o --omf_browse .\objects\canmsgbuffer.crf --depend .\objects\canmsgbuffer.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (src\util\canmsgbuffer.h)(0x5A726D7C)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+F (.\src\util\lstring.cpp)(0x5A761527)(--cpp -c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI --cpp11 --cpp_compat-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\lstring.o --omf_browse .\objects\lstring.crf --depend .\objects\lstring.d)
+I (d:\Keil_v5\ARM\ARMCC\include\cstring)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdlib)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdexcept)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_exception.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\exception)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_defs.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_config.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\config.h)(0x5311110C)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdarg)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cstddef)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\cctype)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\algorithm)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\memory)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\new)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\utility)(0x4EB261B6)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_iterbase.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_mutex.h)(0x564E052E)
+I (d:\Keil_v5\ARM\ARMCC\include\rw\_algobase.h)(0x564E052E)
+I (src\util\lstring.h)(0x5A761534)
+I (d:\Keil_v5\ARM\ARMCC\include\cstdint)(0x588C3A14)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+F (RTE\Device\STM32F042K6\startup_stm32f042.s)(0x5C4B5FB8)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F042 SETA 1"-o .\objects\startup_stm32f042.o --depend .\objects\startup_stm32f042.d)
+F (RTE\Device\STM32F042K6\system_stm32f0xx.c)(0x580FFF34)(-c --cpu Cortex-M0 -D__MICROLIB -g -O2 --apcs=interwork -I .\src\drv\stm32f0xx -I .\src\util -I .\STM32F0xx_StdPeriph_Driver\inc -I .\src\adapter -DHSE_VALUE2=12000000 -DSTM32F042x6 -DPLL_SOURCE_HSI-I.\RTE\_adapter-Id:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-Id:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F042-o .\objects\system_stm32f0xx.o --omf_browse .\objects\system_stm32f0xx.crf --depend .\objects\system_stm32f0xx.d)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\stm32f0xx.h)(0x548F41DE)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0.h)(0x5B621944)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588C3A14)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1FE754)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B58EC86)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B621944)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include\system_stm32f0xx.h)(0x548F41DE)

@@ -1,0 +1,9 @@
+.\objects\sysutilitystm32f0xx.o: src\drv\stm32f0xx\SysutilitySTM32F0xx.cpp
+.\objects\sysutilitystm32f0xx.o: .\src\util\lstring.h
+.\objects\sysutilitystm32f0xx.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\cstdint
+.\objects\sysutilitystm32f0xx.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sysutilitystm32f0xx.o: .\src\util\algorithms.h
+.\objects\sysutilitystm32f0xx.o: .\src\adapter\adaptertypes.h
+.\objects\sysutilitystm32f0xx.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\cstring
+.\objects\sysutilitystm32f0xx.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\sysutilitystm32f0xx.o: .\src\adapter\adapterdefs.h

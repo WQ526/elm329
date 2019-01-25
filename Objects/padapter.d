@@ -1,0 +1,11 @@
+.\objects\padapter.o: src\adapter\obd\padapter.cpp
+.\objects\padapter.o: src\adapter\obd\padapter.h
+.\objects\padapter.o: .\src\adapter\adaptertypes.h
+.\objects\padapter.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\cstdint
+.\objects\padapter.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\padapter.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\cstring
+.\objects\padapter.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\padapter.o: .\src\util\lstring.h
+.\objects\padapter.o: .\src\adapter\adapterdefs.h
+.\objects\padapter.o: src\adapter\obd\autoadapter.h
+.\objects\padapter.o: src\adapter\obd\isocan.h
